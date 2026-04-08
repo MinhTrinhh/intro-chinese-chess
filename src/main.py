@@ -9,14 +9,19 @@ import sys
 def main():
     print("Welcome to Xiangqi AI Assignment!")
     print("1. Play Human (Red) vs Alpha-Beta (Black) in GUI")
-    print("2. Simulate RandomAgent (Black) vs Alpha-Beta (Red) in Match Log")
-    
+    print("2. Simulate RandomAgent (Black) vs Alpha-Beta (Red) in Match Log") 
     choice = input("Enter choice (1 or 2): ").strip()
+
+    agent_level = int(input("Choose agent level [from 1 to 4]:").strip())
+
+    if agent_level not in range(1, 5):
+        print("Invalid Level")
+        sys.exit()
     
     if choice == '1':
         up = input("You want to go first [y/n]:").strip()
 
-        black_ai = AlphaBetaAgent(depth=4)
+        black_ai = AlphaBetaAgent(depth=agent_level)
 
         if up == 'y':
             game = GuiGame(human_camp=Camp.RED, ai_agent=black_ai)
@@ -34,7 +39,7 @@ def main():
     elif choice == '2':
         sec_choice = input("AlphaBeta goes first: 1\nRandom goes first: 2\nEnter:").strip()
 
-        red_ai = AlphaBetaAgent(depth=4)
+        red_ai = AlphaBetaAgent(depth=agent_level)
         black_ai = RandomAgent()
 
         if sec_choice == '1':

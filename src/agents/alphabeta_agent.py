@@ -1,10 +1,22 @@
 import math
+import json
+import os
 from src.evaluation.heuristics import evaluate_board, order_move, escape_loop, add_cache
 
 class AlphaBetaAgent:
     def __init__(self, depth=3):
         self.depth = depth
         self.history = []
+        
+        # Load opening book
+        try:
+            print('[DEBUG] load move')
+            book_path = os.path.join(os.getcwd(), 'move.json')
+            with open(book_path, 'r') as f:
+                self.book = json.load(f)
+        except Exception:
+            print('[DEBUG] load move failed')
+            self.book = {}
 
     def get_action(self, board, camp):
         best_score = -math.inf
@@ -16,6 +28,22 @@ class AlphaBetaAgent:
         if not actions:
             return None
         
+        # --- Opening Book Move ---
+        fen = board.board_to_fen1()
+        if hasattr(self, 'book') and fen in self.book:
+            book_move = self.book[fen]
+            book_src = tuple(book_move['src'])
+            book_dst = tuple(book_move['dst'])
+            
+            # Find the matching action from valid physical moves
+            for action in actions:
+                piece = action['piece']
+                if (piece.col, piece.row) == book_src and action['dst'] == book_dst:
+                    print(f"\n[AlphaBeta] Executing Book Move: {book_move.get('_comment', 'Standard Opening')}")
+                    add_cache(self.history, action)
+                    return action
+        # ------------------------------
+
         if len(actions) > 1:
             actions = escape_loop(self.history, actions)
             actions = order_move(board, actions)

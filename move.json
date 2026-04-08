@@ -1,0 +1,882 @@
+{
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 1 (Red)",
+    "src": [
+      7,
+      7
+    ],
+    "dst": [
+      4,
+      7
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C4/9/RNBAKABNR": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 2 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "rnbakabr1/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 3 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      7,
+      9
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKABR1": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 4 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      2,
+      7
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p3p1p1p/2p6/9/P1P1P1P1P/1CN1C1N2/9/R1BAKABR1": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 5 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      7,
+      3
+    ]
+  },
+  "r1baka1r1/9/1cn1b1nc1/p3p1pRp/2p6/9/P1P1P1P1P/1CN1C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 6 (Red)",
+    "src": [
+      6,
+      6
+    ],
+    "dst": [
+      6,
+      5
+    ]
+  },
+  "rnbakabnr/9/1c2c4/p1p1p1p1p/9/9/P1P1P1P1P/1C2C4/9/RNBAKABNR": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 2 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "rnbakab1r/9/1c2c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 3 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      7,
+      9
+    ]
+  },
+  "rnbakabr1/9/1c2c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKABR1": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 4 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      7,
+      3
+    ]
+  },
+  "r1bakabr1/9/1cn1c1n2/p1p1p1pRp/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB2": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 5 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      0,
+      7
+    ]
+  },
+  "1rbakabr1/9/1cn1c1n2/p1p1p1pRp/9/9/P1P1P1P1P/NC2C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 6 (Red)",
+    "src": [
+      0,
+      9
+    ],
+    "dst": [
+      0,
+      8
+    ]
+  },
+  "rnbakabnr/9/4c2c1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C4/9/RNBAKABNR": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 2 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "rnbakab1r/9/4c1nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 3 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      7,
+      9
+    ]
+  },
+  "rnbakabr1/9/4c1nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKABR1": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 4 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      7,
+      5
+    ]
+  },
+  "r1bakabr1/9/2n1c1nc1/p1p1p1p1p/9/7R1/P1P1P1P1P/1C2C1N2/9/RNBAKAB2": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 5 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      2,
+      7
+    ]
+  },
+  "1rbakabr1/9/2n1c1nc1/p1p1p1p1p/9/7R1/P1P1P1P1P/1CN1C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 6 (Red)",
+    "src": [
+      0,
+      9
+    ],
+    "dst": [
+      1,
+      9
+    ]
+  },
+  "rnbakabnr/9/1c2c4/p1p1p1p1p/9/9/P1P1P1P1P/1C2B2C1/9/RN1AKABNR": {
+    "_comment": "Elephant Opening (Main) - Move 2 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      2,
+      7
+    ]
+  },
+  "rnbakab1r/9/1c2c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B2C1/9/R2AKABNR": {
+    "_comment": "Elephant Opening (Main) - Move 3 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "r1bakab1r/9/1cn1c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B1NC1/9/R2AKAB1R": {
+    "_comment": "Elephant Opening (Main) - Move 4 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      8,
+      8
+    ]
+  },
+  "r1bakab2/8r/1cn1c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B1NC1/8R/R2AKAB2": {
+    "_comment": "Elephant Opening (Main) - Move 5 (Red)",
+    "src": [
+      0,
+      9
+    ],
+    "dst": [
+      1,
+      9
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p3p1p1p/2p6/2P6/P3P1P1P/1C5C1/9/RNBAKABNR": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 2 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      2,
+      7
+    ]
+  },
+  "r1bakabnr/9/1cn4c1/p3p1p1p/2p6/2P6/P3P1P1P/1CN4C1/9/R1BAKABNR": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 3 (Red)",
+    "src": [
+      7,
+      7
+    ],
+    "dst": [
+      4,
+      7
+    ]
+  },
+  "r1bakab1r/9/1cn3nc1/p3p1p1p/2p6/2P6/P3P1P1P/1CN1C4/9/R1BAKABNR": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 4 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p3p1p1p/2p6/2P6/P3P1P1P/1CN1C1N2/9/R1BAKAB1R": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 5 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      7,
+      9
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/4C2C1/9/RNBAKABNR": {
+    "_comment": "Left Central Cannon (Main) - Move 2 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      2,
+      7
+    ]
+  },
+  "rnbakabr1/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/R1BAKABNR": {
+    "_comment": "Left Central Cannon (Main) - Move 3 (Red)",
+    "src": [
+      0,
+      9
+    ],
+    "dst": [
+      1,
+      9
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/1RBAKABNR": {
+    "_comment": "Left Central Cannon (Main) - Move 4 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "1rbakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C1NC1/9/1RBAKAB1R": {
+    "_comment": "Left Central Cannon (Main) - Move 5 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      8,
+      8
+    ]
+  },
+  "rnbakabnr/9/4c2c1/p1p1p1p1p/9/9/P1P1P1P1P/4C2C1/9/RNBAKABNR": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 2 (Red)",
+    "src": [
+      1,
+      9
+    ],
+    "dst": [
+      2,
+      7
+    ]
+  },
+  "r1bakabnr/9/2n1c2c1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/R1BAKABNR": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 3 (Red)",
+    "src": [
+      0,
+      9
+    ],
+    "dst": [
+      1,
+      9
+    ]
+  },
+  "1rbakabnr/9/2n1c2c1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/1RBAKABNR": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 4 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "1rbakab1r/9/2n1c1nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C1NC1/9/1RBAKAB1R": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 5 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      7,
+      9
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p3p/6p2/6P2/P1P1P3P/1C5C1/9/RNBAKABNR": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 2 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p3p/6p2/6P2/P1P1P3P/1C4NC1/9/RNBAKAB1R": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 3 (Red)",
+    "src": [
+      1,
+      7
+    ],
+    "dst": [
+      4,
+      7
+    ]
+  },
+  "r1bakab1r/9/1cn3nc1/p1p1p3p/6p2/6P2/P1P1P3P/4C1NC1/9/RNBAKAB1R": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 4 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      8,
+      8
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN4C1/9/R1BAKABNR": {
+    "_comment": "Horse Opening (Main) - Move 2 (Red)",
+    "src": [
+      7,
+      7
+    ],
+    "dst": [
+      4,
+      7
+    ]
+  },
+  "r1bakab1r/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C4/9/R1BAKABNR": {
+    "_comment": "Horse Opening (Main) - Move 3 (Red)",
+    "src": [
+      0,
+      9
+    ],
+    "dst": [
+      1,
+      9
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C4/9/1RBAKABNR": {
+    "_comment": "Horse Opening (Main) - Move 4 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "1rbakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C1N2/9/1RBAKAB1R": {
+    "_comment": "Horse Opening (Main) - Move 5 (Red)",
+    "src": [
+      8,
+      9
+    ],
+    "dst": [
+      7,
+      9
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C3C3/9/RNBAKABNR": {
+    "_comment": "Cross Palace Cannon - Move 2 (Red)",
+    "src": [
+      7,
+      9
+    ],
+    "dst": [
+      6,
+      7
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C4/9/RNBAKABNR": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 1 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 2 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "rnbakabr1/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKABR1": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 3 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C1N2/9/R1BAKABR1": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 4 (Black)",
+    "src": [
+      2,
+      3
+    ],
+    "dst": [
+      2,
+      4
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p3p1pRp/2p6/9/P1P1P1P1P/1CN1C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 5 (Black)",
+    "src": [
+      6,
+      0
+    ],
+    "dst": [
+      4,
+      2
+    ]
+  },
+  "r1baka1r1/9/1cn1b1nc1/p3p1pRp/2p6/6P2/P1P1P3P/1CN1C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Screen Horse (Main) - Move 6 (Black)",
+    "src": [
+      6,
+      3
+    ],
+    "dst": [
+      6,
+      4
+    ]
+  },
+  "rnbakabnr/9/1c2c4/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 2 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/1c2c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKABR1": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 3 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "rnbakabr1/9/1c2c1n2/p1p1p1pRp/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB2": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 4 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakabr1/9/1cn1c1n2/p1p1p1pRp/9/9/P1P1P1P1P/NC2C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Same Direction Cannon (Main) - Move 5 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  },
+  "rnbakabnr/9/4c2c1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKAB1R": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 2 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/4c1nc1/p1p1p1p1p/9/9/P1P1P1P1P/1C2C1N2/9/RNBAKABR1": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 3 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "rnbakabr1/9/4c1nc1/p1p1p1p1p/9/7R1/P1P1P1P1P/1C2C1N2/9/RNBAKAB2": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 4 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakabr1/9/2n1c1nc1/p1p1p1p1p/9/7R1/P1P1P1P1P/1CN1C1N2/9/R1BAKAB2": {
+    "_comment": "Central Cannon vs Opposite Direction Cannon (Main) - Move 5 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C2B2C1/9/RN1AKABNR": {
+    "_comment": "Elephant Opening (Main) - Move 1 (Black)",
+    "src": [
+      7,
+      2
+    ],
+    "dst": [
+      4,
+      2
+    ]
+  },
+  "rnbakabnr/9/1c2c4/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B2C1/9/R2AKABNR": {
+    "_comment": "Elephant Opening (Main) - Move 2 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/1c2c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B1NC1/9/R2AKAB1R": {
+    "_comment": "Elephant Opening (Main) - Move 3 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakab1r/9/1cn1c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B1NC1/8R/R2AKAB2": {
+    "_comment": "Elephant Opening (Main) - Move 4 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      8,
+      1
+    ]
+  },
+  "r1bakab2/8r/1cn1c1n2/p1p1p1p1p/9/9/P1P1P1P1P/1CN1B1NC1/8R/1R1AKAB2": {
+    "_comment": "Elephant Opening (Main) - Move 5 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/2P6/P3P1P1P/1C5C1/9/RNBAKABNR": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 1 (Black)",
+    "src": [
+      2,
+      3
+    ],
+    "dst": [
+      2,
+      4
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p3p1p1p/2p6/2P6/P3P1P1P/1CN4C1/9/R1BAKABNR": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 2 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakabnr/9/1cn4c1/p3p1p1p/2p6/2P6/P3P1P1P/1CN1C4/9/R1BAKABNR": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 3 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "r1bakab1r/9/1cn3nc1/p3p1p1p/2p6/2P6/P3P1P1P/1CN1C1N2/9/R1BAKAB1R": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 4 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p3p1p1p/2p6/2P6/P3P1P1P/1CN1C1N2/9/R1BAKABR1": {
+    "_comment": "Pawn Opening P3+1 (Main) - Move 5 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/4C2C1/9/RNBAKABNR": {
+    "_comment": "Left Central Cannon (Main) - Move 1 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/R1BAKABNR": {
+    "_comment": "Left Central Cannon (Main) - Move 2 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "rnbakabr1/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/1RBAKABNR": {
+    "_comment": "Left Central Cannon (Main) - Move 3 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C1NC1/9/1RBAKAB1R": {
+    "_comment": "Left Central Cannon (Main) - Move 4 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  },
+  "rnbakabnr/9/4c2c1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/R1BAKABNR": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 2 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakabnr/9/2n1c2c1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C2C1/9/1RBAKABNR": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 3 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  },
+  "1rbakabnr/9/2n1c2c1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C1NC1/9/1RBAKAB1R": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 4 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "1rbakab1r/9/2n1c1nc1/p1p1p1p1p/9/9/P1P1P1P1P/2N1C1NC1/9/1RBAKABR1": {
+    "_comment": "Left Central Cannon vs Same Direction (Main) - Move 5 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/6P2/P1P1P3P/1C5C1/9/RNBAKABNR": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 1 (Black)",
+    "src": [
+      6,
+      3
+    ],
+    "dst": [
+      6,
+      4
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p3p/6p2/6P2/P1P1P3P/1C4NC1/9/RNBAKAB1R": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 2 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p3p/6p2/6P2/P1P1P3P/4C1NC1/9/RNBAKAB1R": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 3 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakab1r/9/1cn3nc1/p1p1p3p/6p2/6P2/P1P1P3P/4C1NC1/8R/RNBAKAB2": {
+    "_comment": "Pawn Opening P7+1 (Main) - Move 4 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      8,
+      1
+    ]
+  },
+  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1CN4C1/9/R1BAKABNR": {
+    "_comment": "Horse Opening (Main) - Move 1 (Black)",
+    "src": [
+      7,
+      0
+    ],
+    "dst": [
+      6,
+      2
+    ]
+  },
+  "rnbakab1r/9/1c4nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C4/9/R1BAKABNR": {
+    "_comment": "Horse Opening (Main) - Move 2 (Black)",
+    "src": [
+      1,
+      0
+    ],
+    "dst": [
+      2,
+      2
+    ]
+  },
+  "r1bakab1r/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C4/9/1RBAKABNR": {
+    "_comment": "Horse Opening (Main) - Move 3 (Black)",
+    "src": [
+      8,
+      0
+    ],
+    "dst": [
+      7,
+      0
+    ]
+  },
+  "r1bakabr1/9/1cn3nc1/p1p1p1p1p/9/9/P1P1P1P1P/1CN1C1N2/9/1RBAKAB1R": {
+    "_comment": "Horse Opening (Main) - Move 4 (Black)",
+    "src": [
+      0,
+      0
+    ],
+    "dst": [
+      1,
+      0
+    ]
+  }
+}
