@@ -4,18 +4,21 @@ import os
 from src.evaluation.heuristics import evaluate_board, order_move, escape_loop, add_cache
 
 class AlphaBetaAgent:
-    def __init__(self, depth=3):
+    def __init__(self, depth=3, use_book=True):
         self.depth = depth
+        self.use_book = use_book
         self.history = []
         
         # Load opening book
         try:
-            print('[DEBUG] load move')
+            if self.use_book:
+                print('[DEBUG] load move')
             book_path = os.path.join(os.getcwd(), 'move.json')
             with open(book_path, 'r') as f:
                 self.book = json.load(f)
         except Exception:
-            print('[DEBUG] load move failed')
+            if self.use_book:
+                print('[DEBUG] load move failed')
             self.book = {}
 
     def get_action(self, board, camp):
@@ -30,7 +33,7 @@ class AlphaBetaAgent:
         
         # --- Opening Book Move ---
         fen = board.board_to_fen1()
-        if hasattr(self, 'book') and fen in self.book:
+        if self.use_book and hasattr(self, 'book') and fen in self.book:
             book_move = self.book[fen]
             book_src = tuple(book_move['src'])
             book_dst = tuple(book_move['dst'])
