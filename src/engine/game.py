@@ -2,6 +2,9 @@ from xiangqi.board import Board
 from xiangqi.constants import FULL_BOARD, Camp
 
 class Game:
+    RED_PIECES = {"俥", "傌", "相", "仕", "帥", "炮", "兵"}
+    BLACK_PIECES = {"車", "馬", "象", "士", "將", "砲", "卒"}
+
     def __init__(self, red_agent, black_agent):
         self.board = Board(FULL_BOARD)
         self.agents = {
@@ -9,6 +12,20 @@ class Game:
             Camp.BLACK: black_agent
         }
         self.current_turn = Camp.RED
+
+    def _board_to_html(self):
+        board_str = str(self.board)
+        html_parts = []
+
+        for ch in board_str:
+            if ch in self.RED_PIECES:
+                html_parts.append(f"<span style=\"color:red\">{ch}</span>")
+            elif ch in self.BLACK_PIECES:
+                html_parts.append(f"<span style=\"color:black\">{ch}</span>")
+            else:
+                html_parts.append(ch)
+
+        return "".join(html_parts)
 
     def play(self, log_path="match_log.html"):
         turn_num = 1
@@ -20,10 +37,7 @@ class Game:
             # Print initial board state
             print(f"{'='*40}", file=f)
             print("INITIAL BOARD", file=f)
-            board_str = str(self.board)
-            board_str = board_str.replace("\x1b[1;31;47m", "<span style=\"color:red\">")
-            board_str = board_str.replace("\x1b[1;30;47m", "<span style=\"color:black\">")
-            board_str = board_str.replace("\x1b[0m", "</span>")
+            board_str = self._board_to_html()
             print(board_str, file=f)
             print(f"{'='*40}", file=f)
 
@@ -60,10 +74,7 @@ class Game:
     
                 # Print board state AFTER the move
                 print(f"{'='*40}", file=f)
-                board_str = str(self.board)
-                board_str = board_str.replace("\x1b[1;31;47m", "<span style=\"color:red\">")
-                board_str = board_str.replace("\x1b[1;30;47m", "<span style=\"color:black\">")
-                board_str = board_str.replace("\x1b[0m", "</span>")
+                board_str = self._board_to_html()
                 print(board_str, file=f)
                 print(f"{'='*40}\n", file=f)
 
