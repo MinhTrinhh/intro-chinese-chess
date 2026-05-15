@@ -49,8 +49,8 @@ class AlphaBetaAgent:
 
         if len(actions) > 1:
             actions = escape_loop(self.history, actions)
-            actions = order_move(board, actions)
-
+            # actions = order_move(board, actions)
+            actions = order_move(board, actions, history=self.history)
         
         for action in actions:
             piece = action['piece']
@@ -79,24 +79,22 @@ class AlphaBetaAgent:
         
         actions = board.get_final_valid_actions(current_turn_camp)
         if not actions:
-            return -100000 - depth #lost
-        
-        actions = order_move(board, actions)
+            return -100000 - depth
+
+        # Truyền history để penalize nước lặp trong toàn bộ search tree
+        actions = order_move(board, actions, history=self.history)
 
         max_eval = -math.inf
-
         for action in actions:
             piece, dst = action['piece'], action['dst']
-
             is_ok, bak_pos, captured = board.virtual_move(piece, dst)
             eval = -self._negamax(board, depth - 1, -beta, -alpha, current_turn_camp.opponent())
-
             board.undo_virtual_move(piece, bak_pos, captured)
 
             max_eval = max(max_eval, eval)
             alpha = max(alpha, eval)
-
             if alpha >= beta:
                 break
             
         return max_eval
+   

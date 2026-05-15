@@ -26,3 +26,7 @@ Thumbs.db
 
 # Application generated files
 match_log.html
+
+logs/
+data/
+models/
