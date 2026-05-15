@@ -1,13 +1,21 @@
 import math
 import json
 import os
+import torch
+
+from xiangqi.constants import Camp
 from src.evaluation.heuristics import evaluate_board, order_move, escape_loop, add_cache
+from src.ml.board_encoder import board_to_tensor
 
 class AlphaBetaAgent:
-    def __init__(self, depth=3, use_book=True):
+    def __init__(self, depth=3, use_book=True, model=None):
         self.depth = depth
         self.use_book = use_book
+        self.model = model
         self.history = []
+
+        if self.model is not None:
+            self.model.eval()
         
         # Load opening book
         try:
@@ -73,9 +81,29 @@ class AlphaBetaAgent:
 
         return best_action        
 
+    def _evaluate_leaf(self, board, current_turn_camp):
+        if self.model is None:
+            return evaluate_board(board, current_turn_camp)
+
+        board_tensor = torch.from_numpy(board_to_tensor(board).astype('float32')).unsqueeze(0)
+
+        try:
+            model_device = next(self.model.parameters()).device
+            board_tensor = board_tensor.to(model_device)
+        except StopIteration:
+            pass
+
+        with torch.no_grad():
+            score = self.model(board_tensor).squeeze().item()
+
+        if current_turn_camp == Camp.BLACK:
+            score = -score
+
+        return score
+
     def _negamax(self, board, depth, alpha, beta, current_turn_camp):
         if depth == 0:
-            return evaluate_board(board, current_turn_camp)
+            return self._evaluate_leaf(board, current_turn_camp)
         
         actions = board.get_final_valid_actions(current_turn_camp)
         if not actions:
