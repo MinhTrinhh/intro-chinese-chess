@@ -35,7 +35,7 @@ import argparse
 
   
 
-RANDOM_OPENING_MOVES = 3
+RANDOM_OPENING_MOVES = 4
 
 
 def _make_rng(base_seed: int | None, game_id: int) -> random.Random:
@@ -60,12 +60,23 @@ def play_one_game(args):
     
     board_fens = []  # Lightweight FEN encoding
     move_count = 0
-    max_moves = 150
+    max_moves = 400
     outcome = 'draw'
     
+    # Position repetition tracking
+    position_counts = Counter()
+    
     while move_count < max_moves:
+        fen_before = board.board_to_fen1()
+        position_counts[fen_before] += 1
+        
+        # Detect draw by repetition
+        if position_counts[fen_before] > 3:
+            outcome = 'draw'
+            break
+        
         # Save FEN before move
-        board_fens.append(board.board_to_fen1())
+        board_fens.append(fen_before)
 
         # Select action: random opening for first few moves, then agents
         if move_count < RANDOM_OPENING_MOVES:
@@ -95,15 +106,21 @@ def play_one_game(args):
         # Check if general captured
         if captured and captured.force.name == "SHUAI":
             outcome = 'red_win' if current_turn == Camp.RED else 'black_win'
-            break
         
         # Check for draw
-        if board.test_draw():
+        elif board.test_draw():
             outcome = 'draw'
+        
+        # Stop if game ended
+        if (captured and captured.force.name == "SHUAI") or board.test_draw():
             break
         
         current_turn = current_turn.opponent()
         move_count += 1
+    
+    # Timeout
+    if move_count >= max_moves:
+        outcome = 'draw'
     
     # Convert outcome to label (perspective: RED)
     if outcome == 'red_win':
@@ -201,6 +218,8 @@ def play_one_game_debug(args):
         from collections import Counter
         position_counts = Counter()
 
+        consecutive_checks = {Camp.RED: 0, Camp.BLACK: 0}
+        
         while move_count < max_moves:
             fen_before = board.board_to_fen1()
             position_counts[fen_before] += 1
@@ -369,7 +388,7 @@ def collect_parallel(n_games=100, red_depth=3, black_depth=3, n_workers=8, base_
     all_samples = []
     with Pool(processes=n_workers) as pool:
         results = tqdm(
-            pool.imap_unordered(play_one_game_debug, args_list),
+            pool.imap_unordered(play_one_game, args_list),
             total=n_games,
             desc="Playing games"
         )
@@ -395,10 +414,8 @@ def save_dataset(dataset, path="data/training_data.pkl"):
     
     print(f"✓ Saved {len(dataset)} samples to {path}")
     print(f"  File size: {path.stat().st_size / (1024*1024):.2f} MB")
-    print(f"  Format: [(X: np.int8[90], y: np.int8), ...]")
 
 def test_selfplay_debug(n_games=8, red_depth=3, black_depth=3, n_workers=8, base_seed: int | None = None):
-    """Quick test with configurable games and seed."""
     print("\n[TEST] Self-Play Data Collection (Quick Test)")
     print("-" * 50)
     
