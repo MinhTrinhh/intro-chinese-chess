@@ -26,29 +26,41 @@ def evaluate_board(board, maximizing_camp):
         piece_val = PIECE_VALUES.get(piece.force, 0)
         if piece.camp == maximizing_camp:
             score += piece_val
-            if piece.force in (Force.JU, Force.PAO, Force.MA, Force.BING):
+
+            if piece.force in (Force.JU, Force.PAO, Force.MA):
                 own_attack_pieces.append((pos, piece))
+
+            # Tốt: thưởng riêng theo độ tiến sâu, không dùng proximity
+            elif piece.force == Force.BING:
+                if maximizing_camp == Camp.RED:
+                    # RED đi từ hàng 9 lên hàng 0
+                    advancement = 9 - pos[1]  # càng gần hàng 0 càng cao
+                else:
+                    # BLACK đi từ hàng 0 xuống hàng 9
+                    advancement = pos[1]
+                score += advancement * 10  # tối đa +90 khi sát cung địch
         else:
             score -= piece_val
 
+    # Proximity chỉ cho xe/pháo/mã, không cho tốt
     if enemy_shuai_pos:
-        # Proximity scoring
         for pos, piece in own_attack_pieces:
             dist = abs(pos[0] - enemy_shuai_pos[0]) + abs(pos[1] - enemy_shuai_pos[1])
             score += max(0, (10 - dist)) * 15
 
-        # King mobility
         enemy_shuai_piece = board.situation.get(enemy_shuai_pos)
         if enemy_shuai_piece:
             raw_moves = enemy_shuai_piece.get_valid_pos(board)
             score += (4 - len(raw_moves)) * 20
 
-    # Check bonus: thưởng nếu đang chiếu tướng địch
-    # board.test_check(camp) trả về True nếu camp đang bị chiếu
-    # tức là maximizing_camp đang chiếu đối thủ
+    # Check bonus: càng ít nước thoát càng được thưởng nhiều
     try:
-        if board.test_check(maximizing_camp.opponent()):
-            score += 500
+        enemy_camp = maximizing_camp.opponent()
+        if board.test_check(enemy_camp):
+            enemy_actions = board.get_final_valid_actions(enemy_camp)
+            if not enemy_actions:
+                return 99999
+            score += 500 + (4 - len(enemy_actions)) * 100
     except Exception:
         pass
 
