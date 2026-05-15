@@ -17,6 +17,7 @@ Piece Mapping:
 """
 
 import torch
+import numpy as np
 from xiangqi.constants import Camp, Force
 
 
@@ -56,14 +57,14 @@ FEN_CHAR_MAP = {
 }
 
 
-def fen_to_tensor(fen: str) -> torch.Tensor:
+def fen_to_tensor(fen: str) -> np.ndarray:
     """
-    Convert FEN string directly to tensor (no Board object needed).
+    Convert FEN string directly to numpy array (no Board object needed).
     Returns:
-        torch.Tensor of shape [90], dtype=torch.float32
+        np.ndarray of shape [90], dtype=np.int8
         Index mapping: i = col * 10 + row
     """
-    tensor = torch.zeros(90, dtype=torch.float32)
+    tensor = np.zeros(90, dtype=np.int8)
     
     rows = fen.split('/')
     for row_idx, row in enumerate(rows):
@@ -88,7 +89,7 @@ def fen_to_tensor(fen: str) -> torch.Tensor:
 
 def board_to_tensor(board, camp=None):
     """
-    Convert board state to torch tensor.
+    Convert board state to numpy array.
     
     Args:
         board: Xiangqi Board object
@@ -97,10 +98,10 @@ def board_to_tensor(board, camp=None):
               If BLACK: black is positive, red is negative (perspective flip)
     
     Returns:
-        torch.Tensor of shape [90], dtype=torch.float32
+        np.ndarray of shape [90], dtype=np.int8
         Index mapping: i = col * 10 + row
     """
-    tensor = torch.zeros(90, dtype=torch.float32)
+    tensor = np.zeros(90, dtype=np.int8)
     
     # Iterate through all pieces on board
     for piece in board.situation.values():
@@ -126,18 +127,33 @@ def board_to_tensor(board, camp=None):
 
 
 def board_to_tensor_batch(boards, camp=None):
-    """
-    Convert multiple boards to tensor batch.
-    
-    Args:
-        boards: List of Board objects
-        camp: Optional camp perspective
-    
-    Returns:
-        torch.Tensor of shape [batch_size, 90]
-    """
     batch = torch.stack([board_to_tensor(board, camp) for board in boards])
     return batch
+
+
+def load_training_batch(samples):
+    """
+    Convert stored numpy int8 samples to torch float32 tensors for training.
+    
+    Args:
+        samples: List of (X, y) tuples where X is np.int8[90], y is np.int8
+    
+    Returns:
+        (X_tensor, y_tensor) where:
+        - X_tensor: torch.Tensor(shape=(N, 90), dtype=torch.float32)
+        - y_tensor: torch.Tensor(shape=(N,), dtype=torch.float32)
+    """
+    X_list = [s[0] for s in samples]  # List of np.ndarray with dtype=int8
+    y_list = [s[1] for s in samples]  # List of np.int8
+    
+    X = np.array(X_list, dtype=np.int8)  # shape: (N, 90), dtype: int8
+    y = np.array(y_list, dtype=np.int8)  # shape: (N,), dtype: int8
+    
+    # Convert to torch tensors with float32 for computation
+    X_tensor = torch.from_numpy(X.astype(np.float32))  # (N, 90), float32
+    y_tensor = torch.from_numpy(y.astype(np.float32))  # (N,), float32
+    
+    return X_tensor, y_tensor
 
 
 def get_piece_at(tensor, col, row):
